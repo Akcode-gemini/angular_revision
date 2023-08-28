@@ -1,0 +1,11 @@
+<div>
+  <h2>{{title}}</h2>
+  <div>
+    <p>Name:{{name}}</p>
+    <p>Price:${{price}}</p>
+    <p>Color:{{color}}</p>
+    <p>Discounted Price:{{price-(price*discount/100)}}</p>
+    <p>{{instock>0?'only'+instock+'items left':"out of stock"}}</p>
+  </div>
+
+</div>

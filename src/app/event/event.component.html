@@ -1,0 +1,11 @@
+<div>
+  <h2>{{title}}</h2>
+  <input (input)="onNameChange($event)">
+  <p>name:{{name}}</p>
+  <button (click)="dec()">decrement</button>&nbsp;
+  <span *ngIf="count>0">{{count}}</span>&nbsp;
+  <button (click)="inc()">increment</button>&nbsp;
+  <br>
+  <h2>{{t1}}</h2>
+  <input type="text" [(ngModel)]="name" >
+  <p>name:{{name}}</p>

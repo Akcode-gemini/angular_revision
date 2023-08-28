@@ -1,0 +1,17 @@
+<div>
+<div>
+  <h2>Custom Property Binding and Event Binding</h2>
+  <app-filter
+    [all]="totalCount"
+    [inStock]="totalInStock"
+    [outOfStock]="totalOutOfStock"
+    (selectedFilterButtonChanged)="onFilterChanged($event)"></app-filter>
+  </div>
+  <div *ngFor="let prod of product">
+    <app-product
+      *ngIf="
+        selectedFilterRadioButton === 'all' ||
+        prod.is_in_inventory.toString() === selectedFilterRadioButton
+      " [product]="prod"></app-product>
+  </div>
+</div>

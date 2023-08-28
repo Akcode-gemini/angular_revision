@@ -1,0 +1,4 @@
+<h2>Directives</h2>
+<div *ngFor="let item of product,index as i"  [ngClass]="(i + 1) % 2 == 0 ? 'blue' : ''" [ngStyle]="{fontWeight:'bold'}">
+  <p>{{item}}</p>
+</div>
